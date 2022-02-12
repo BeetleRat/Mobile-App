@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Mobile-App</string>
+    <string name="calculator_activity_button">Калькулятор</string>
+    <string name="camera_activity_button">Камера</string>
+    <string name="location_activity_button">Геолокация</string>
+    <string name="database_activity_button">База данных</string>
+    <string name="rest_activity_button">REST</string>
+    <string name="calculator_activity_button_pressed">В данный момент калькулятор не реализован</string>
+    <string name="camera_activity_button_pressed">В данный момент камера не реализована</string>
+    <string name="location_activity_button_pressed">В данный момент геолокация не реализована</string>
+    <string name="database_activity_button_pressed">В данный момент база данных не реализована</string>
+    <string name="rest_activity_button_pressed">В данный момент REST не реализован</string>
 </resources>
