@@ -109,8 +109,9 @@ class CalculatorActivity : AppCompatActivity() {
             val activityContext = Intent(this,ProgressActivity::class.java)
 
             if(elements.textAnswer.text.isNotEmpty()){
+                val doubleValue:Double=elements.textAnswer.text.toString().toDouble()
                 // Наполняем контекст переменными
-                activityContext.putExtra("progressNumber",Integer.parseInt(elements.textAnswer.text.toString()))
+                activityContext.putExtra("progressNumber",doubleValue.toInt())
             }
             /* Запускаем новое activity согласно activityContext
             через обработчик результата activity(launcher) - activityLauncher
