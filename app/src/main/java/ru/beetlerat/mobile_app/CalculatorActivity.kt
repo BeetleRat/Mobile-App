@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import ru.beetlerat.mobile_app.calculator.StringCalculate
 
 import ru.beetlerat.mobile_app.databinding.ActivityCalculatorBinding
 
@@ -12,6 +13,8 @@ class CalculatorActivity : AppCompatActivity() {
 
     // Переменная содержащая все объекты Activity Calculator layout
     private lateinit var elements:ActivityCalculatorBinding
+
+    private var isAnswerInTextAnswer:Boolean=false
 
     private fun initElements(){
         elements.calculatorTitle.setText(R.string.calculator_title)
@@ -25,17 +28,21 @@ class CalculatorActivity : AppCompatActivity() {
         elements.buttonEqual.setOnClickListener {
             // Строка из цифр и знаков, которую надо подсчитать
             val equalsString:String=elements.textAnswer.text.toString()
-            var answer=0.0
             // Расчет выражения
-
+            val answer=StringCalculate.calculate(equalsString)
             // Запись результата в view
             elements.textAnswer.setText(answer.toString())
+            isAnswerInTextAnswer=true
         }
     }
 
 
     fun numberOnClickListener(view: View){
-        val button:Button=findViewById(view.id)
+        if(isAnswerInTextAnswer){
+            isAnswerInTextAnswer=false
+            elements.textAnswer.text.clear()
+        }
+        val button:Button?=findViewById(view.id)
         if(button!=null){
             var newAnswer:String =elements.textAnswer.text.toString()
             if(newAnswer.isEmpty()){
