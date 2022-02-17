@@ -20,7 +20,7 @@ class ProgressActivity : AppCompatActivity() {
         elements.numberText.setText(intent.getIntExtra("progressNumber",100).toString())
         elements.percentText.setText("1")
         // Расчитываем процент
-        val resultValue=Integer.parseInt(elements.numberText.text.toString())/100*Integer.parseInt(elements.percentText.text.toString())
+        val resultValue=elements.numberText.text.toString().toDouble()/100*elements.percentText.text.toString().toDouble()
         // Выводим результат в resultText
         elements.resultText.setText(resultValue.toString())
     }
@@ -64,7 +64,7 @@ class ProgressActivity : AppCompatActivity() {
             // Перегрузка функции действий после изменения текста
             override fun afterTextChanged(s: Editable) {
                 // Расчитываем процент
-                val resultValue=Integer.parseInt(elements.numberText.text.toString())/100*Integer.parseInt(elements.percentText.text.toString())
+                val resultValue=elements.numberText.text.toString().toDouble()/100*elements.percentText.text.toString().toDouble()
                 // Выводим результат в resultText
                 elements.resultText.setText(resultValue.toString())
                 // Устанавливаем каретку в конец строки
