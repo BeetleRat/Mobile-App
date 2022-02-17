@@ -11,6 +11,7 @@ class CounterActivity : AppCompatActivity() {
     private lateinit var minusButton: Button
     private lateinit var counter:TextView
     private lateinit var toCalculatorActivityButton: Button
+    private lateinit var toProgressActivityButton: Button
     private lateinit var cancelButton: Button
 
     // Объявление переменных
@@ -20,6 +21,7 @@ class CounterActivity : AppCompatActivity() {
         pluseButton=findViewById(R.id.plusButton)
         minusButton=findViewById(R.id.minusButton)
         toCalculatorActivityButton=findViewById(R.id.fromCounterToCalculatorButton)
+        toProgressActivityButton=findViewById(R.id.fromCounterToProgressButton)
         cancelButton=findViewById(R.id.cancelButton)
         counter=findViewById(R.id.counter1Text)
         counter.setText(counterValue.toString())
@@ -37,17 +39,30 @@ class CounterActivity : AppCompatActivity() {
                 counter.setText(counterValue.toString())
             }
         }
-
-        toCalculatorActivityButton.setOnClickListener {
-            // Формируем результат работы activity для родительского activity
-            intent.putExtra("toActivity",ActivityName.CALCULATOR_ACTIVITY)
-            finish()
-        }
-
         cancelButton.setOnClickListener {
             counterValue=0
             counter.setText(counterValue.toString())
         }
+
+        toCalculatorActivityButton.setOnClickListener {
+            // Формируем результат работы activity для родительского activity
+            intent.putExtra("toActivity",ActivityName.CALCULATOR_ACTIVITY)
+            // activity завершен со статусом RESULT_OK
+            // результат работы передается в объекте класса Intent
+            setResult(RESULT_OK,intent)
+            finish()
+        }
+        toProgressActivityButton.setOnClickListener {
+            // Формируем результат работы activity для родительского activity
+            intent.putExtra("toActivity",ActivityName.PROGRESS_ACTIVITY)
+            intent.putExtra("progressNumber",counterValue)
+            // activity завершен со статусом RESULT_OK
+            // результат работы передается в объекте класса Intent
+            setResult(RESULT_OK,intent)
+            finish()
+        }
+
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

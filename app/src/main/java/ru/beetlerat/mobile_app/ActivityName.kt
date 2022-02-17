@@ -4,4 +4,5 @@ object ActivityName {
     const val MAIN_ACTIVITY="Main Activity"
     const val CALCULATOR_ACTIVITY="Calculator Activity"
     const val COUNTER_ACTIVITY="Counter Activity"
+    const val PROGRESS_ACTIVITY="Progress Activity"
 }

@@ -37,11 +37,28 @@ class CalculatorActivity : AppCompatActivity() {
                        данный объект служит для создания инструкции запуска новой activity
                        в данном случае мы создаем новое activity от this класса
                        (когда новое activity закроется, откроется this класс)
-                       по данной инструкции создается activity из класса CalculatorActivity
+                       по данной инструкции создается activity из класса CounterActivity
                         */
                         val activityContext = Intent(this,CounterActivity::class.java)
                         /* Запускаем новое activity согласно activityContext
-                        через обработчик результата activity(launcher) - calculatorActivityLauncher
+                        через обработчик результата activity(launcher) - activityLauncher
+                         */
+                        activityLauncher.launch(activityContext)
+                    }
+                    ActivityName.PROGRESS_ACTIVITY->{
+                        /* Создать переменную объекта Intent
+                       данный объект служит для создания инструкции запуска новой activity
+                       в данном случае мы создаем новое activity от this класса
+                       (когда новое activity закроется, откроется this класс)
+                       по данной инструкции создается activity из класса ProgressActivity
+                        */
+                        val activityContext = Intent(this,ProgressActivity::class.java)
+                        // Наполняем контекст переменными
+                        // Передаем переменную результата работы дочерней activity progressNumber,
+                        // в activityContext под именем progressNumber
+                        activityContext.putExtra("progressNumber",result.data?.getIntExtra("progressNumber",100))
+                        /* Запускаем новое activity согласно activityContext
+                        через обработчик результата activity(launcher) - activityLauncher
                          */
                         activityLauncher.launch(activityContext)
                     }
@@ -68,16 +85,35 @@ class CalculatorActivity : AppCompatActivity() {
             isAnswerInTextAnswer=true
         }
 
-        elements.counterActivityButton.setOnClickListener {
+        elements.fromCalculatorToCounterButton.setOnClickListener {
             /* Создать переменную объекта Intent
             данный объект служит для создания инструкции запуска новой activity
             в данном случае мы создаем новое activity от this класса
             (когда новое activity закроется, откроется this класс)
-            по данной инструкции создается activity из класса CalculatorActivity
+            по данной инструкции создается activity из класса CounterActivity
              */
             val activityContext = Intent(this,CounterActivity::class.java)
             /* Запускаем новое activity согласно activityContext
-            через обработчик результата activity(launcher) - calculatorActivityLauncher
+            через обработчик результата activity(launcher) - activityLauncher
+             */
+            activityLauncher.launch(activityContext)
+        }
+
+        elements.fromCalculatorToProgressButton.setOnClickListener {
+            /* Создать переменную объекта Intent
+            данный объект служит для создания инструкции запуска новой activity
+            в данном случае мы создаем новое activity от this класса
+            (когда новое activity закроется, откроется this класс)
+            по данной инструкции создается activity из класса ProgressActivity
+             */
+            val activityContext = Intent(this,ProgressActivity::class.java)
+
+            if(elements.textAnswer.text.isNotEmpty()){
+                // Наполняем контекст переменными
+                activityContext.putExtra("progressNumber",Integer.parseInt(elements.textAnswer.text.toString()))
+            }
+            /* Запускаем новое activity согласно activityContext
+            через обработчик результата activity(launcher) - activityLauncher
              */
             activityLauncher.launch(activityContext)
         }

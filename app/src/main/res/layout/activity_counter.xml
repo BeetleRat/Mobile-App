@@ -87,15 +87,29 @@
         android:id="@+id/fromCounterToCalculatorButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="142dp"
         android:backgroundTint="#05CABA"
         android:text="@string/calculator_activity_button"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/fromCounterToProgressButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fromCounterToProgressButton"
         app:layout_constraintVertical_bias="0.837" />
+
+    <Button
+        android:id="@+id/fromCounterToProgressButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="142dp"
+        android:backgroundTint="#05CABA"
+        android:text="@string/progress_title"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toEndOf="@+id/fromCounterToCalculatorButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.90" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
