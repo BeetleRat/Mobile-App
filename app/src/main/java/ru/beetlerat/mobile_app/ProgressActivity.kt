@@ -19,10 +19,8 @@ class ProgressActivity : AppCompatActivity() {
         // или 100 если такого значения нет в родительском activity
         elements.numberText.setText(intent.getIntExtra("progressNumber",100).toString())
         elements.percentText.setText("1")
-        // Расчитываем процент
-        val resultValue=elements.numberText.text.toString().toDouble()/100*elements.percentText.text.toString().toDouble()
         // Выводим результат в resultText
-        elements.resultText.setText(resultValue.toString())
+        elements.resultText.setText(calculatePercentage().toString())
     }
 
     private fun addListenersToElements(){
@@ -47,10 +45,8 @@ class ProgressActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable) {
                 // Устанавливаем progressBar в соответствии с новым значением
                 elements.progressBar.setProgress(Integer.parseInt(elements.percentText.text.toString()))
-                // Расчитываем процент
-                val resultValue=elements.numberText.text.toString().toDouble()/100*elements.percentText.text.toString().toDouble()
                 // Выводим результат в resultText
-                elements.resultText.setText(resultValue.toString())
+                elements.resultText.setText(calculatePercentage().toString())
                 // Устанавливаем каретку в конец строки
                 elements.percentText.setSelection(s.length)
             }
@@ -63,10 +59,8 @@ class ProgressActivity : AppCompatActivity() {
         elements.numberText.addTextChangedListener(object : TextWatcher {
             // Перегрузка функции действий после изменения текста
             override fun afterTextChanged(s: Editable) {
-                // Расчитываем процент
-                val resultValue=elements.numberText.text.toString().toDouble()/100*elements.percentText.text.toString().toDouble()
                 // Выводим результат в resultText
-                elements.resultText.setText(resultValue.toString())
+                elements.resultText.setText(calculatePercentage().toString())
                 // Устанавливаем каретку в конец строки
                 elements.numberText.setSelection(s.length)
             }
@@ -103,5 +97,9 @@ class ProgressActivity : AppCompatActivity() {
         initElements()
 
         addListenersToElements()
+    }
+
+    private fun calculatePercentage():Double{
+        return elements.numberText.text.toString().toDouble()/100*elements.percentText.text.toString().toDouble()
     }
 }
