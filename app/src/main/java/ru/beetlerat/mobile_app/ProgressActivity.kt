@@ -48,7 +48,7 @@ class ProgressActivity : AppCompatActivity() {
                 // Устанавливаем progressBar в соответствии с новым значением
                 elements.progressBar.setProgress(Integer.parseInt(elements.percentText.text.toString()))
                 // Расчитываем процент
-                val resultValue=Integer.parseInt(elements.numberText.text.toString())/100*Integer.parseInt(elements.percentText.text.toString())
+                val resultValue=elements.numberText.text.toString().toDouble()/100*elements.percentText.text.toString().toDouble()
                 // Выводим результат в resultText
                 elements.resultText.setText(resultValue.toString())
                 // Устанавливаем каретку в конец строки
