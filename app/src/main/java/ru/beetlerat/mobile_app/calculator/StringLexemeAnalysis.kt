@@ -48,8 +48,8 @@ class StringLexemeAnalysis {
                 }
                 index++
             }
-            // Убираем лишние знаки вконце выражения
-            index--
+            // Убираем лишние знаки в конце выражения
+            index=lexemes.size-1
             while (lexemes.get(index).getType()!=LexemeType.NUMBER&&lexemes.get(index).getType()!=LexemeType.RIGHT_BRACKET&&index>=0){
                 lexemes.remove(lexemes.get(index))
                 index--

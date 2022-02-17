@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/calculator_background"
+    tools:context=".CounterActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="179dp"
+        android:text="@string/counter_title"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#9479D80D"
+        android:text="+"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/counter1Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintStart_toEndOf="@+id/counter1Text"
+        app:layout_constraintTop_toTopOf="@+id/counter1Text" />
+
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#94D8360D"
+        android:text="-"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/counter1Text"
+        app:layout_constraintEnd_toStartOf="@+id/counter1Text"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/counter1Text" />
+
+    <EditText
+        android:id="@+id/counter1Text"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="84dp"
+        android:background="@color/white"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="multiply"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="@string/counter_cancel_button"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/counter1Text"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@+id/counter1Text"
+        app:layout_constraintTop_toBottomOf="@+id/counter1Text"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <Button
+        android:id="@+id/fromCounterToCalculatorButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="142dp"
+        android:backgroundTint="#05CABA"
+        android:text="@string/calculator_activity_button"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

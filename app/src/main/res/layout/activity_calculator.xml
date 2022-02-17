@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D20B63BF"
+    android:background="@color/calculator_background"
     tools:context=".CalculatorActivity">
 
     <Button
@@ -267,11 +267,26 @@
         android:id="@+id/calculatorTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/calculator_title"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textAnswer"
         app:layout_constraintEnd_toEndOf="@+id/textAnswer"
         app:layout_constraintStart_toStartOf="@+id/textAnswer"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/counterActivityButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="142dp"
+        android:backgroundTint="#05CABA"
+        android:text="@string/counter_activity_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

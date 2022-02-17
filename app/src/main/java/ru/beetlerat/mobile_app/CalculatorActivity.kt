@@ -1,10 +1,14 @@
 package ru.beetlerat.mobile_app
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import ru.beetlerat.mobile_app.calculator.StringCalculate
 
 import ru.beetlerat.mobile_app.databinding.ActivityCalculatorBinding
@@ -14,10 +18,39 @@ class CalculatorActivity : AppCompatActivity() {
     // Переменная содержащая все объекты Activity Calculator layout
     private lateinit var elements:ActivityCalculatorBinding
 
+    // Объявление лаунчеров activity
+    private lateinit var activityLauncher: ActivityResultLauncher<Intent>
+
+    // Объявление переменных
     private var isAnswerInTextAnswer:Boolean=false
 
-    private fun initElements(){
-        elements.calculatorTitle.setText(R.string.calculator_title)
+    private fun initActivityLaunchers(){
+        activityLauncher=registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+                result: ActivityResult ->
+            // Если дочерняя activity завершилась со статусом RESULT_OK
+            if(result.resultCode==RESULT_OK){
+                // обрабатываем результаты, которые вернула дочерняя activity
+                val nextActivity= result.data?.getStringExtra("toActivity")
+                when(nextActivity){
+                    ActivityName.COUNTER_ACTIVITY->{
+                        /* Создать переменную объекта Intent
+                       данный объект служит для создания инструкции запуска новой activity
+                       в данном случае мы создаем новое activity от this класса
+                       (когда новое activity закроется, откроется this класс)
+                       по данной инструкции создается activity из класса CalculatorActivity
+                        */
+                        val activityContext = Intent(this,CounterActivity::class.java)
+                        /* Запускаем новое activity согласно activityContext
+                        через обработчик результата activity(launcher) - calculatorActivityLauncher
+                         */
+                        activityLauncher.launch(activityContext)
+                    }
+                    ActivityName.CALCULATOR_ACTIVITY->{
+                        // Ничего не делаем
+                    }
+                }
+            }
+        }
     }
 
     private fun addListenersToElements(){
@@ -34,8 +67,21 @@ class CalculatorActivity : AppCompatActivity() {
             elements.textAnswer.setText(answer.toString())
             isAnswerInTextAnswer=true
         }
-    }
 
+        elements.counterActivityButton.setOnClickListener {
+            /* Создать переменную объекта Intent
+            данный объект служит для создания инструкции запуска новой activity
+            в данном случае мы создаем новое activity от this класса
+            (когда новое activity закроется, откроется this класс)
+            по данной инструкции создается activity из класса CalculatorActivity
+             */
+            val activityContext = Intent(this,CounterActivity::class.java)
+            /* Запускаем новое activity согласно activityContext
+            через обработчик результата activity(launcher) - calculatorActivityLauncher
+             */
+            activityLauncher.launch(activityContext)
+        }
+    }
 
     fun numberOnClickListener(view: View){
         if(isAnswerInTextAnswer){
@@ -68,7 +114,7 @@ class CalculatorActivity : AppCompatActivity() {
         // Отображаем форму из переменной elements как контент в данном activity
         setContentView(elements.root)
 
-        initElements()
+        initActivityLaunchers()
 
         addListenersToElements()
     }

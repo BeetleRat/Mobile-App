@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/GitHub/Mobile-App/app/src/main/res/layout/activity_calculator.xml" value="0.4" />
+        <entry key="..\:/GitHub/Mobile-App/app/src/main/res/layout/activity_counter.xml" value="0.4" />
         <entry key="..\:/GitHub/Mobile-App/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/Mobile-App/app/src/main/res/layout/activity_progress.xml" value="0.11302083333333333" />
       </map>
     </option>
   </component>

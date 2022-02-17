@@ -11,4 +11,8 @@
     <string name="rest_activity_button_pressed">В данный момент REST не реализован</string>
 
     <string name="calculator_title">Калькулятор</string>
+    <string name="counter_activity_button">Счетчик</string>
+
+    <string name="counter_title">Счетчик</string>
+    <string name="counter_cancel_button">Сброс</string>
 </resources>
