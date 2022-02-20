@@ -19,14 +19,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var restActivityButton:Button
 
     // Объявление лаунчеров activity
-    private lateinit var calculatorActivityLauncher: ActivityResultLauncher<Intent>
+    private lateinit var mainActivityLauncher: ActivityResultLauncher<Intent>
 
     private fun initElements(){
         calculatorActivityButton=findViewById(R.id.calculatorActivityButton)
         calculatorActivityButton.setText(R.string.calculator_activity_button)
 
         cameraActivityButton=findViewById(R.id.cameraActivityButton)
-        cameraActivityButton.setText(R.string.camera_activity_button)
+        cameraActivityButton.setText(R.string.camera_title)
 
         locationActivityButton=findViewById(R.id.locationActivityButton)
         locationActivityButton.setText(R.string.location_activity_button)
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initActivityLaunchers(){
-        calculatorActivityLauncher=registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+        mainActivityLauncher=registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
             result: ActivityResult ->
             // Если дочерняя activity завершилась со статусом RESULT_OK
             if(result.resultCode==RESULT_OK){
@@ -58,14 +58,14 @@ class MainActivity : AppCompatActivity() {
              */
             val activityContext = Intent(this,CalculatorActivity::class.java)
             /* Запускаем новое activity согласно activityContext
-            через обработчик результата activity(launcher) - calculatorActivityLauncher
+            через обработчик результата activity(launcher) - mainActivityLauncher
              */
-            calculatorActivityLauncher.launch(activityContext)
+            mainActivityLauncher.launch(activityContext)
         }
 
         cameraActivityButton.setOnClickListener {
-            // Вывести заглушку на экран
-            Toast.makeText(this,R.string.camera_activity_button_pressed,Toast.LENGTH_LONG).show()
+            val activityContext = Intent(this,CameraActivity::class.java)
+            mainActivityLauncher.launch(activityContext)
         }
 
         locationActivityButton.setOnClickListener {
