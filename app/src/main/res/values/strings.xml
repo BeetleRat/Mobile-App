@@ -1,12 +1,8 @@
 <resources>
     <string name="app_name">Mobile-App</string>
-    <string name="calculator_activity_button">Калькулятор</string>
-    <string name="camera_title">Камера</string>
-    <string name="location_activity_button">Геолокация</string>
     <string name="database_activity_button">База данных</string>
     <string name="rest_activity_button">REST</string>
     <string name="camera_activity_button_pressed">Данное устройство не разрешает использовать камеру</string>
-    <string name="location_activity_button_pressed">В данный момент геолокация не реализована</string>
     <string name="database_activity_button_pressed">В данный момент база данных не реализована</string>
     <string name="rest_activity_button_pressed">В данный момент REST не реализован</string>
 
@@ -20,7 +16,18 @@
     <string name="progress_percent_label">Процент:</string>
     <string name="progress_result_label">Результат:</string>
 
+    <string name="camera_title">Камера</string>
     <string name="image_does_not_exists">Не получилось создать изображение</string>
     <string name="back_button">Назад</string>
     <string name="avatar_label">Аватар</string>
+
+    <string name="location_title">Геолокация</string>
+    <string name="coord_label">Текущие координаты:</string>
+    <string name="coord_waiting">Ожидание получения координат...</string>
+    <string name="location_trouble">Геолокация отключена.</string>
+    <string name="coord_latitude">Широта: </string>
+    <string name="coord_longitude">Долгота: </string>
+    <string name="coord_altitude">Высота: </string>
+    <string name="coord_bearing">Азимут: </string>
+    <string name="coord_accuracy">Точность: </string>
 </resources>

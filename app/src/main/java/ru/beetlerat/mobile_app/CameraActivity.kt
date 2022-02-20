@@ -17,7 +17,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import ru.beetlerat.mobile_app.camera.PermissionsCode
 
 class CameraActivity : AppCompatActivity() {
     // Объявление объектов разметки
@@ -49,7 +48,8 @@ class CameraActivity : AppCompatActivity() {
                 }
             } else {
                 // Если нет разрешения на использование камеры, тогда запрасить разрешения: использование камеры
-                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA),PermissionsCode.AVATAR_CAMERA_PERMISSION)
+                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA),
+                    PermissionsCode.AVATAR_CAMERA_PERMISSION)
             }
         }
     }

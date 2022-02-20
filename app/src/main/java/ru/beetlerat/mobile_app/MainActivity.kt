@@ -23,13 +23,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun initElements(){
         calculatorActivityButton=findViewById(R.id.calculatorActivityButton)
-        calculatorActivityButton.setText(R.string.calculator_activity_button)
+        calculatorActivityButton.setText(R.string.calculator_title)
 
         cameraActivityButton=findViewById(R.id.cameraActivityButton)
         cameraActivityButton.setText(R.string.camera_title)
 
         locationActivityButton=findViewById(R.id.locationActivityButton)
-        locationActivityButton.setText(R.string.location_activity_button)
+        locationActivityButton.setText(R.string.location_title)
 
         databaseActivityButton=findViewById(R.id.databaseActivityButton)
         databaseActivityButton.setText(R.string.database_activity_button)
@@ -69,8 +69,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         locationActivityButton.setOnClickListener {
-            // Вывести заглушку на экран
-            Toast.makeText(this,R.string.location_activity_button_pressed,Toast.LENGTH_LONG).show()
+            val activityContext = Intent(this,GeoActivity::class.java)
+            mainActivityLauncher.launch(activityContext)
         }
 
         databaseActivityButton.setOnClickListener {

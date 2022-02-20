@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/geo_background"
+    tools:context=".GeoActivity">
+
+    <ImageView
+        android:id="@+id/globeImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271"
+        app:srcCompat="@drawable/globe"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/globeBackButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="@string/back_button"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/globeImage"
+        app:layout_constraintStart_toStartOf="@+id/globeImage"
+        app:layout_constraintTop_toBottomOf="@+id/globeImage"
+        app:layout_constraintVertical_bias="0.80" />
+
+    <TextView
+        android:id="@+id/currentCoord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/globeBackButton"
+        app:layout_constraintEnd_toEndOf="@+id/globeImage"
+        app:layout_constraintStart_toStartOf="@+id/globeImage"
+        app:layout_constraintTop_toBottomOf="@+id/globeImage"
+        app:layout_constraintVertical_bias="0.434" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coord_label"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/currentCoord"
+        app:layout_constraintEnd_toEndOf="@+id/currentCoord"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/currentCoord"
+        app:layout_constraintTop_toBottomOf="@+id/globeImage"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location_title"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <ProgressBar
+        android:id="@+id/waitingCoord"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:clickable="false"
+        android:indeterminateTint="@color/geo_progress_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/globeImage"
+        app:layout_constraintEnd_toEndOf="@+id/globeImage"
+        app:layout_constraintStart_toStartOf="@+id/globeImage"
+        app:layout_constraintTop_toTopOf="@+id/globeImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
