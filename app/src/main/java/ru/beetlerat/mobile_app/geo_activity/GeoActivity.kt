@@ -1,4 +1,4 @@
-package ru.beetlerat.mobile_app
+package ru.beetlerat.mobile_app.geo_activity
 
 import android.content.Context
 import android.content.pm.PackageManager
@@ -10,6 +10,8 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import ru.beetlerat.mobile_app.PermissionsCode
+import ru.beetlerat.mobile_app.R
 
 
 class GeoActivity : AppCompatActivity() {
@@ -101,7 +103,8 @@ class GeoActivity : AppCompatActivity() {
                     android.Manifest.permission.ACCESS_FINE_LOCATION,
                     android.Manifest.permission.ACCESS_COARSE_LOCATION
                 ),
-                PermissionsCode.GEO_PERMISSIONS)
+                PermissionsCode.GEO_PERMISSIONS
+            )
         } else {
             // Запросить новые данные через GPS_PROVIDER
             locationManager.requestLocationUpdates(

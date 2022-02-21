@@ -1,9 +1,6 @@
 <resources>
     <string name="app_name">Mobile-App</string>
-    <string name="database_activity_button">База данных</string>
     <string name="rest_activity_button">REST</string>
-    <string name="camera_activity_button_pressed">Данное устройство не разрешает использовать камеру</string>
-    <string name="database_activity_button_pressed">В данный момент база данных не реализована</string>
     <string name="rest_activity_button_pressed">В данный момент REST не реализован</string>
 
     <string name="calculator_title">Калькулятор</string>
@@ -17,6 +14,7 @@
     <string name="progress_result_label">Результат:</string>
 
     <string name="camera_title">Камера</string>
+    <string name="camera_activity_button_pressed">Данное устройство не разрешает использовать камеру</string>
     <string name="image_does_not_exists">Не получилось создать изображение</string>
     <string name="back_button">Назад</string>
     <string name="avatar_label">Аватар</string>
@@ -30,4 +28,18 @@
     <string name="coord_altitude">Высота: </string>
     <string name="coord_bearing">Азимут: </string>
     <string name="coord_accuracy">Точность: </string>
+
+    <string name="database_title">База данных</string>
+    <string name="russian_word_label">Слово на русском:</string>
+    <string name="first_form_label">Неопределенная форма:</string>
+    <string name="second_form_label">Прошедшее время:</string>
+    <string name="third_form_label">Причастие прошедшего времени:</string>
+    <string name="add_button">Добавить</string>
+    <string name="edit_button">Изменить</string>
+    <string name="back_to_main_button">На главную</string>
+    <string name="id_label">ID в базе данных:</string>
+    <string name="next_button">Следующий</string>
+    <string name="prev_button">Предыдущий</string>
+    <string name="del_button">Удалить</string>
+    <string name="empty_database">База данных пуста.</string>
 </resources>

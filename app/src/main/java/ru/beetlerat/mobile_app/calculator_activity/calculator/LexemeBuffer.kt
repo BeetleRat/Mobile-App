@@ -1,12 +1,10 @@
-package ru.beetlerat.mobile_app.calculator
+package ru.beetlerat.mobile_app.calculator_activity.calculator
 
-class LexemeBuffer {
+class LexemeBuffer(private var lexemeList: List<Lexeme>) {
     private var index:Int
-    private var lexemeList:List<Lexeme>
 
-    constructor( lexemeList: List<Lexeme>) {
+    init {
         this.index = 0
-        this.lexemeList = lexemeList
     }
 
     fun next():Lexeme{

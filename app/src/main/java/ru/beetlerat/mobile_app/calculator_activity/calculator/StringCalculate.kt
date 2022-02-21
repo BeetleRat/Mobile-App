@@ -1,4 +1,4 @@
-package ru.beetlerat.mobile_app.calculator
+package ru.beetlerat.mobile_app.calculator_activity.calculator
 
 import android.util.Log
 

@@ -4,11 +4,9 @@
     package="ru.beetlerat.mobile_app">
     <!-- Запросить разрешение на использование камеры и записи аудио -->
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <!-- Запросить разрешение на запись и чтение на sd-карты -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- Запросить разрешение на запись и чтение на sd-карты -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- Запросить разрешение на получение геолокации -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Запросить разрешение на получение геолокации -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
@@ -21,19 +19,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileApp">
         <activity
-            android:name=".GeoActivity"
+            android:name=".database_activity.EnglishVerbsUpdateActivity"
             android:exported="false" />
         <activity
-            android:name=".CameraActivity"
+            android:name=".database_activity.EnglishVerbsInsertActivity"
             android:exported="false" />
         <activity
-            android:name=".ProgressActivity"
+            android:name=".database_activity.EnglishVerbsSelectActivity"
             android:exported="false" />
         <activity
-            android:name=".CounterActivity"
+            android:name=".geo_activity.GeoActivity"
             android:exported="false" />
         <activity
-            android:name=".CalculatorActivity"
+            android:name=".camera_activity.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".calculator_activity.ProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".calculator_activity.CounterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".calculator_activity.CalculatorActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

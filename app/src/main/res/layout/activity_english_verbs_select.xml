@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/database_background"
+    tools:context=".database_activity.EnglishVerbsSelectActivity">
+
+    <EditText
+        android:id="@+id/thirdFormText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/russianTextView"
+        app:layout_constraintStart_toStartOf="@+id/russianTextView"
+        app:layout_constraintTop_toBottomOf="@+id/russianTextView"
+        app:layout_constraintVertical_bias="0.503" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/third_form_label"
+        app:layout_constraintBottom_toTopOf="@+id/thirdFormText"
+        app:layout_constraintEnd_toEndOf="@+id/thirdFormText"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/thirdFormText"
+        app:layout_constraintTop_toBottomOf="@+id/secondFormText"
+        app:layout_constraintVertical_bias="0.742" />
+
+    <EditText
+        android:id="@+id/secondFormText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/russianTextView"
+        app:layout_constraintStart_toStartOf="@+id/russianTextView"
+        app:layout_constraintTop_toBottomOf="@+id/russianTextView"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/second_form_label"
+        app:layout_constraintBottom_toTopOf="@+id/secondFormText"
+        app:layout_constraintEnd_toEndOf="@+id/secondFormText"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/secondFormText"
+        app:layout_constraintTop_toBottomOf="@+id/firstFormText"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/database_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <TextView
+        android:id="@+id/russianTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Слово на русском"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.148" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/first_form_label"
+        app:layout_constraintBottom_toTopOf="@+id/firstFormText"
+        app:layout_constraintEnd_toEndOf="@+id/firstFormText"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/firstFormText"
+        app:layout_constraintTop_toBottomOf="@+id/russianTextView"
+        app:layout_constraintVertical_bias="0.926" />
+
+    <EditText
+        android:id="@+id/firstFormText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/russianTextView"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/russianTextView"
+        app:layout_constraintTop_toBottomOf="@+id/russianTextView"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <Button
+        android:id="@+id/addVerbButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/add_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thirdFormText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/editVerbButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_button"
+        app:layout_constraintBottom_toBottomOf="@+id/addVerbButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toEndOf="@+id/addVerbButton"
+        app:layout_constraintTop_toTopOf="@+id/addVerbButton"
+        app:layout_constraintVertical_bias="0.297" />
+
+    <Button
+        android:id="@+id/backToMainButton"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="@string/back_to_main_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editVerbButton"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@+id/addVerbButton"
+        app:layout_constraintTop_toBottomOf="@+id/thirdFormText"
+        app:layout_constraintVertical_bias="0.708" />
+</androidx.constraintlayout.widget.ConstraintLayout>

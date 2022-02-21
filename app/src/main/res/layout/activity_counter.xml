@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/calculator_background"
-    tools:context=".CounterActivity">
+    tools:context=".calculator_activity.calculator.CounterActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -88,7 +88,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#05CABA"
-        android:text="@string/calculator_activity_button"
+        android:text="@string/calculator_title"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/fromCounterToProgressButton"
         app:layout_constraintEnd_toEndOf="parent"

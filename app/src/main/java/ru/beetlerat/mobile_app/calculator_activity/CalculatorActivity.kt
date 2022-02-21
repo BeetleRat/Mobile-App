@@ -1,4 +1,4 @@
-package ru.beetlerat.mobile_app
+package ru.beetlerat.mobile_app.calculator_activity
 
 
 import android.content.Intent
@@ -9,7 +9,9 @@ import android.widget.Button
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import ru.beetlerat.mobile_app.calculator.StringCalculate
+import ru.beetlerat.mobile_app.ActivityName
+import ru.beetlerat.mobile_app.calculator_activity.calculator.StringCalculate
+
 
 import ru.beetlerat.mobile_app.databinding.ActivityCalculatorBinding
 
@@ -32,27 +34,27 @@ class CalculatorActivity : AppCompatActivity() {
                 // обрабатываем результаты, которые вернула дочерняя activity
                 val nextActivity= result.data?.getStringExtra("toActivity")
                 when(nextActivity){
-                    ActivityName.COUNTER_ACTIVITY->{
+                    ActivityName.COUNTER_ACTIVITY ->{
                         /* Создать переменную объекта Intent
                        данный объект служит для создания инструкции запуска новой activity
                        в данном случае мы создаем новое activity от this класса
                        (когда новое activity закроется, откроется this класс)
                        по данной инструкции создается activity из класса CounterActivity
                         */
-                        val activityContext = Intent(this,CounterActivity::class.java)
+                        val activityContext = Intent(this, CounterActivity::class.java)
                         /* Запускаем новое activity согласно activityContext
                         через обработчик результата activity(launcher) - activityLauncher
                          */
                         activityLauncher.launch(activityContext)
                     }
-                    ActivityName.PROGRESS_ACTIVITY->{
+                    ActivityName.PROGRESS_ACTIVITY ->{
                         /* Создать переменную объекта Intent
                        данный объект служит для создания инструкции запуска новой activity
                        в данном случае мы создаем новое activity от this класса
                        (когда новое activity закроется, откроется this класс)
                        по данной инструкции создается activity из класса ProgressActivity
                         */
-                        val activityContext = Intent(this,ProgressActivity::class.java)
+                        val activityContext = Intent(this, ProgressActivity::class.java)
                         // Наполняем контекст переменными
                         // Передаем переменную результата работы дочерней activity progressNumber,
                         // в activityContext под именем progressNumber
@@ -62,7 +64,7 @@ class CalculatorActivity : AppCompatActivity() {
                          */
                         activityLauncher.launch(activityContext)
                     }
-                    ActivityName.CALCULATOR_ACTIVITY->{
+                    ActivityName.CALCULATOR_ACTIVITY ->{
                         // Ничего не делаем
                     }
                 }
@@ -79,7 +81,7 @@ class CalculatorActivity : AppCompatActivity() {
             // Строка из цифр и знаков, которую надо подсчитать
             val equalsString:String=elements.textAnswer.text.toString()
             // Расчет выражения
-            val answer=StringCalculate.calculate(equalsString)
+            val answer= StringCalculate.calculate(equalsString)
             // Запись результата в view
             elements.textAnswer.setText(answer.toString())
             isAnswerInTextAnswer=true
@@ -92,7 +94,7 @@ class CalculatorActivity : AppCompatActivity() {
             (когда новое activity закроется, откроется this класс)
             по данной инструкции создается activity из класса CounterActivity
              */
-            val activityContext = Intent(this,CounterActivity::class.java)
+            val activityContext = Intent(this, CounterActivity::class.java)
             /* Запускаем новое activity согласно activityContext
             через обработчик результата activity(launcher) - activityLauncher
              */
@@ -106,7 +108,7 @@ class CalculatorActivity : AppCompatActivity() {
             (когда новое activity закроется, откроется this класс)
             по данной инструкции создается activity из класса ProgressActivity
              */
-            val activityContext = Intent(this,ProgressActivity::class.java)
+            val activityContext = Intent(this, ProgressActivity::class.java)
 
             if(elements.textAnswer.text.isNotEmpty()){
                 val doubleValue:Double=elements.textAnswer.text.toString().toDouble()

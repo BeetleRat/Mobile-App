@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/geo_background"
-    tools:context=".GeoActivity">
+    tools:context=".geo_activity.GeoActivity">
 
     <ImageView
         android:id="@+id/globeImage"

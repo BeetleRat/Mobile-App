@@ -1,10 +1,11 @@
-package ru.beetlerat.mobile_app
+package ru.beetlerat.mobile_app.calculator_activity
 
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
+import ru.beetlerat.mobile_app.ActivityName
 import ru.beetlerat.mobile_app.databinding.ActivityProgressBinding
 
 

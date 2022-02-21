@@ -7,8 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#65FF0000</color>
     <color name="calculator_background">#D20B63BF</color>
     <color name="geo_background">#C646B1DC</color>
     <color name="geo_progress_bar">#A6000000</color>
-
+    <color name="database_background">#DA959595</color>
+    <color name="correct_edit_text">#901AFF00</color>
 </resources>

@@ -1,9 +1,11 @@
-package ru.beetlerat.mobile_app
+package ru.beetlerat.mobile_app.calculator_activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import ru.beetlerat.mobile_app.ActivityName
+import ru.beetlerat.mobile_app.R
 
 class CounterActivity : AppCompatActivity() {
     // Объявление объектов разметки
@@ -46,7 +48,7 @@ class CounterActivity : AppCompatActivity() {
 
         toCalculatorActivityButton.setOnClickListener {
             // Формируем результат работы activity для родительского activity
-            intent.putExtra("toActivity",ActivityName.CALCULATOR_ACTIVITY)
+            intent.putExtra("toActivity", ActivityName.CALCULATOR_ACTIVITY)
             // activity завершен со статусом RESULT_OK
             // результат работы передается в объекте класса Intent
             setResult(RESULT_OK,intent)
@@ -54,7 +56,7 @@ class CounterActivity : AppCompatActivity() {
         }
         toProgressActivityButton.setOnClickListener {
             // Формируем результат работы activity для родительского activity
-            intent.putExtra("toActivity",ActivityName.PROGRESS_ACTIVITY)
+            intent.putExtra("toActivity", ActivityName.PROGRESS_ACTIVITY)
             intent.putExtra("progressNumber",counterValue)
             // activity завершен со статусом RESULT_OK
             // результат работы передается в объекте класса Intent
