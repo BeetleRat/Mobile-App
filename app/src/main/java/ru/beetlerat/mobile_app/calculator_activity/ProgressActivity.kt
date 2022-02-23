@@ -43,13 +43,16 @@ class ProgressActivity : AppCompatActivity() {
         // Устанавливаем слушателя изменения значения в percentText через адаптер TextWatcher
         elements.percentText.addTextChangedListener(object : TextWatcher {
             // Перегрузка функции действий после изменения текста
-            override fun afterTextChanged(s: Editable) {
+            override fun afterTextChanged(newText: Editable) {
+                if(newText.length==0){
+                    elements.percentText.setText("0")
+                }
                 // Устанавливаем progressBar в соответствии с новым значением
                 elements.progressBar.setProgress(Integer.parseInt(elements.percentText.text.toString()))
                 // Выводим результат в resultText
                 elements.resultText.setText(calculatePercentage().toString())
                 // Устанавливаем каретку в конец строки
-                elements.percentText.setSelection(s.length)
+                elements.percentText.setSelection(newText.length)
             }
 
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
@@ -59,11 +62,14 @@ class ProgressActivity : AppCompatActivity() {
         // Устанавливаем слушателя изменения значения в numberText через адаптер TextWatcher
         elements.numberText.addTextChangedListener(object : TextWatcher {
             // Перегрузка функции действий после изменения текста
-            override fun afterTextChanged(s: Editable) {
+            override fun afterTextChanged(newText: Editable) {
+                if(newText.length==0){
+                    elements.numberText.setText("0")
+                }
                 // Выводим результат в resultText
                 elements.resultText.setText(calculatePercentage().toString())
                 // Устанавливаем каретку в конец строки
-                elements.numberText.setSelection(s.length)
+                elements.numberText.setSelection(newText.length)
             }
 
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
