@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Mobile-App</string>
-    <string name="rest_activity_button">REST</string>
-    <string name="rest_activity_button_pressed">В данный момент REST не реализован</string>
 
     <string name="calculator_title">Калькулятор</string>
 
@@ -40,6 +38,20 @@
     <string name="id_label">ID в базе данных:</string>
     <string name="next_button">Следующий</string>
     <string name="prev_button">Предыдущий</string>
+    <string name="update_button">Обновить</string>
+    <string name="cancel_button">Отмена</string>
     <string name="del_button">Удалить</string>
     <string name="empty_database">База данных пуста.</string>
+
+    <string name="rest_title">REST</string>
+    <string name="endpoint_label">Введите основной адрес:</string>
+    <string name="connection_failed_label">Основной адресс введен не верно!!!</string>
+    <string name="connect_to_server_button">Подключиться</string>
+    <string name="books_list_title">Список книг</string>
+    <string name="book_id">ID</string>
+    <string name="book_name">Название</string>
+    <string name="book_price">Цена</string>
+    <string name="book_author">Автор</string>
+    <string name="book_description">Описание</string>
+
 </resources>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".rest_activity.BooksListActivity">
+
+    <TextView
+        android:id="@+id/bookDescriptionLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/book_description"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookPriceLabel"
+        app:layout_constraintVertical_bias="0.134" />
+
+    <TextView
+        android:id="@+id/bookPriceLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/book_price"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookAuthorLabel"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <TextView
+        android:id="@+id/bookAuthorLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/book_author"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookNameLabel"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <TextView
+        android:id="@+id/bookNameLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/book_name"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookIdLabel"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/books_list_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <TextView
+        android:id="@+id/bookIdLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/book_id"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
+
+    <Button
+        android:id="@+id/nextBookButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/next_button"
+        app:layout_constraintBottom_toBottomOf="@+id/prevBookButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toEndOf="@+id/prevBookButton"
+        app:layout_constraintTop_toTopOf="@+id/prevBookButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/prevBookButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/prev_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.726" />
+
+    <Button
+        android:id="@+id/addBookButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/prevBookButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/prevBookButton"
+        app:layout_constraintTop_toBottomOf="@+id/prevBookButton"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/updateBookButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/update_button"
+        app:layout_constraintBottom_toBottomOf="@+id/addBookButton"
+        app:layout_constraintEnd_toEndOf="@+id/nextBookButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/addBookButton"
+        app:layout_constraintTop_toTopOf="@+id/addBookButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/deleteBookButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/del_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/updateBookButton"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="@+id/addBookButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928" />
+
+    <TextView
+        android:id="@+id/bookDescriptionText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/bookDescriptionLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toEndOf="@+id/bookDescriptionLabel"
+        app:layout_constraintTop_toTopOf="@+id/bookDescriptionLabel" />
+
+    <TextView
+        android:id="@+id/bookPriceText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/bookPriceLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toEndOf="@+id/bookPriceLabel"
+        app:layout_constraintTop_toTopOf="@+id/bookPriceLabel"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <TextView
+        android:id="@+id/bookAuthorText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/bookAuthorLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toEndOf="@+id/bookAuthorLabel"
+        app:layout_constraintTop_toTopOf="@+id/bookAuthorLabel" />
+
+    <TextView
+        android:id="@+id/bookNameText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/bookNameLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toEndOf="@+id/bookNameLabel"
+        app:layout_constraintTop_toTopOf="@+id/bookNameLabel"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <TextView
+        android:id="@+id/bookIdText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/bookIdLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintStart_toEndOf="@+id/bookIdLabel"
+        app:layout_constraintTop_toTopOf="@+id/bookIdLabel"
+        app:layout_constraintVertical_bias="0.538" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

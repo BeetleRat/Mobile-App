@@ -63,7 +63,4 @@ class VerbsIDBuffer(private var verbsIdList:ArrayList<Int>) {
     fun deleteCurrentID(){
         verbsIdList.remove(verbsIdList.get(index))
     }
-
-
-
 }

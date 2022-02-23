@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -12,6 +11,7 @@ import ru.beetlerat.mobile_app.calculator_activity.CalculatorActivity
 import ru.beetlerat.mobile_app.camera_activity.CameraActivity
 import ru.beetlerat.mobile_app.database_activity.EnglishVerbsSelectActivity
 import ru.beetlerat.mobile_app.geo_activity.GeoActivity
+import ru.beetlerat.mobile_app.rest_activity.RestActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         databaseActivityButton.setText(R.string.database_title)
 
         restActivityButton=findViewById(R.id.restActivityButton)
-        restActivityButton.setText(R.string.rest_activity_button)
+        restActivityButton.setText(R.string.rest_title)
     }
 
     private fun initActivityLaunchers(){
@@ -83,8 +83,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         restActivityButton.setOnClickListener {
-            // Вывести заглушку на экран
-            Toast.makeText(this,R.string.rest_activity_button_pressed,Toast.LENGTH_LONG).show()
+            val activityContext = Intent(this, RestActivity::class.java)
+            mainActivityLauncher.launch(activityContext)
         }
     }
 
